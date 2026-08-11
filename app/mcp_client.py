@@ -69,7 +69,7 @@ async def open_mcp_session() -> AsyncIterator[MCPToolSession]:
     env["PYTHONPATH"] = str(settings.root) + os.pathsep + env.get("PYTHONPATH", "")
     params = StdioServerParameters(
         command=sys.executable,
-        args=["-m", "mcp.server"],
+        args=["-m", "mcp_server.server"],
         env=env,
         cwd=str(settings.root),
     )
