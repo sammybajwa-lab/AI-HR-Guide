@@ -1,0 +1,14 @@
+flowchart LR
+    U[Browser] --> W[FastAPI web app]
+    W --> A[Agent orchestrator]
+    A --> C[MCP client]
+    C -->|stdio| S[MCP server]
+    S --> R[Policy RAG]
+    R --> V[(Chroma index)]
+    V --> P[Policy corpus]
+    S --> D[(Synthetic JSON data)]
+    A --> L[Optional LLM synthesis]
+    R --> L
+    D --> L
+    L --> G[Citation validation / grounded fallback]
+    G --> W
