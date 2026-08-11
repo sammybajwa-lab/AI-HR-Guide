@@ -1,0 +1,397 @@
+[
+  {
+    "id": "pto_01",
+    "prompt": "E102 wants to use 24 hours of PTO. Does the balance support it, and what approval is still needed?",
+    "employee_id": "E102",
+    "expected_status": "ok",
+    "required_tools": [
+      "lookup_employee_profile",
+      "check_pto_balance",
+      "check_policy_compliance",
+      "search_policy_documents"
+    ],
+    "expected_sources": [
+      "MF-POL-101"
+    ],
+    "expected_keywords": [
+      "56",
+      "24",
+      "manager"
+    ]
+  },
+  {
+    "id": "pto_02",
+    "prompt": "I want to use 16 hours of PTO. Can I?",
+    "employee_id": null,
+    "expected_status": "needs_clarification",
+    "required_tools": [],
+    "expected_sources": [],
+    "expected_keywords": [
+      "employee id"
+    ]
+  },
+  {
+    "id": "pto_03",
+    "prompt": "Can E102 take some PTO next month?",
+    "employee_id": "E102",
+    "expected_status": "needs_clarification",
+    "required_tools": [],
+    "expected_sources": [],
+    "expected_keywords": [
+      "hours"
+    ]
+  },
+  {
+    "id": "pto_04",
+    "prompt": "E107 wants to use 16 hours of PTO.",
+    "employee_id": "E107",
+    "expected_status": "ok",
+    "required_tools": [
+      "check_pto_balance",
+      "check_policy_compliance",
+      "search_policy_documents"
+    ],
+    "expected_sources": [
+      "MF-POL-101"
+    ],
+    "expected_keywords": [
+      "8",
+      "16",
+      "negative balance"
+    ]
+  },
+  {
+    "id": "remote_01",
+    "prompt": "E104 wants to work from France for six weeks, Monday-Friday. Can she do it?",
+    "employee_id": "E104",
+    "expected_status": "ok",
+    "required_tools": [
+      "lookup_employee_profile",
+      "check_policy_compliance",
+      "search_policy_documents"
+    ],
+    "expected_sources": [
+      "MF-POL-201",
+      "MF-POL-202",
+      "MF-POL-301"
+    ],
+    "expected_keywords": [
+      "30",
+      "20",
+      "formal"
+    ]
+  },
+  {
+    "id": "remote_02",
+    "prompt": "E104 plans to work from France for 10 working days. What review is needed?",
+    "employee_id": "E104",
+    "expected_status": "ok",
+    "required_tools": [
+      "check_policy_compliance",
+      "search_policy_documents"
+    ],
+    "expected_sources": [
+      "MF-POL-201",
+      "MF-POL-202",
+      "MF-POL-301"
+    ],
+    "expected_keywords": [
+      "pre-approval",
+      "People Operations"
+    ]
+  },
+  {
+    "id": "remote_03",
+    "prompt": "E101 wants to work from California for 12 working days.",
+    "employee_id": "E101",
+    "expected_status": "ok",
+    "required_tools": [
+      "check_policy_compliance",
+      "search_policy_documents"
+    ],
+    "expected_sources": [
+      "MF-POL-201",
+      "MF-POL-202"
+    ],
+    "expected_keywords": [
+      "review"
+    ]
+  },
+  {
+    "id": "remote_04",
+    "prompt": "E104 wants to work from France for six weeks.",
+    "employee_id": "E104",
+    "expected_status": "needs_clarification",
+    "required_tools": [],
+    "expected_sources": [],
+    "expected_keywords": [
+      "working days"
+    ]
+  },
+  {
+    "id": "expense_01",
+    "prompt": "Can E101 be reimbursed for a $200 home office chair?",
+    "employee_id": "E101",
+    "expected_status": "ok",
+    "required_tools": [
+      "lookup_employee_profile",
+      "check_policy_compliance",
+      "search_policy_documents"
+    ],
+    "expected_sources": [
+      "MF-POL-401",
+      "MF-POL-402"
+    ],
+    "expected_keywords": [
+      "potentially reimbursable"
+    ]
+  },
+  {
+    "id": "expense_02",
+    "prompt": "Can E101 be reimbursed for a $300 home office chair if it was not pre-approved?",
+    "employee_id": "E101",
+    "expected_status": "ok",
+    "required_tools": [
+      "check_policy_compliance",
+      "search_policy_documents"
+    ],
+    "expected_sources": [
+      "MF-POL-401",
+      "MF-POL-402"
+    ],
+    "expected_keywords": [
+      "preapproval required"
+    ]
+  },
+  {
+    "id": "expense_03",
+    "prompt": "E101 bought a $1200 laptop personally. Can it be reimbursed?",
+    "employee_id": "E101",
+    "expected_status": "ok",
+    "required_tools": [
+      "check_policy_compliance",
+      "search_policy_documents"
+    ],
+    "expected_sources": [
+      "MF-POL-401",
+      "MF-POL-402"
+    ],
+    "expected_keywords": [
+      "not standard reimbursement"
+    ]
+  },
+  {
+    "id": "expense_04",
+    "prompt": "Can E101 be reimbursed for a $1200 software subscription?",
+    "employee_id": "E101",
+    "expected_status": "ok",
+    "required_tools": [
+      "check_policy_compliance",
+      "search_policy_documents"
+    ],
+    "expected_sources": [
+      "MF-POL-401"
+    ],
+    "expected_keywords": [
+      "budget owner"
+    ]
+  },
+  {
+    "id": "expense_05",
+    "prompt": "Can E101 be reimbursed $300 for something I bought?",
+    "employee_id": "E101",
+    "expected_status": "needs_clarification",
+    "required_tools": [],
+    "expected_sources": [],
+    "expected_keywords": [
+      "item"
+    ]
+  },
+  {
+    "id": "benefits_01",
+    "prompt": "What is E103's medical benefits eligibility?",
+    "employee_id": "E103",
+    "expected_status": "ok",
+    "required_tools": [
+      "search_policy_documents",
+      "lookup_employee_profile",
+      "lookup_benefits_status"
+    ],
+    "expected_sources": [
+      "MF-POL-501"
+    ],
+    "expected_keywords": [
+      "not_eligible_hours"
+    ]
+  },
+  {
+    "id": "benefits_02",
+    "prompt": "Is E107 enrolled in medical benefits yet?",
+    "employee_id": "E107",
+    "expected_status": "ok",
+    "required_tools": [
+      "search_policy_documents",
+      "lookup_benefits_status"
+    ],
+    "expected_sources": [
+      "MF-POL-501"
+    ],
+    "expected_keywords": [
+      "pending",
+      "2026-09-01"
+    ]
+  },
+  {
+    "id": "benefits_03",
+    "prompt": "When does health coverage begin for a newly eligible employee?",
+    "employee_id": null,
+    "expected_status": "ok",
+    "required_tools": [
+      "search_policy_documents"
+    ],
+    "expected_sources": [
+      "MF-POL-501"
+    ],
+    "expected_keywords": [
+      "first day"
+    ]
+  },
+  {
+    "id": "benefits_04",
+    "prompt": "Does E106 meet the general hours threshold for core health benefits?",
+    "employee_id": "E106",
+    "expected_status": "ok",
+    "required_tools": [
+      "lookup_employee_profile",
+      "lookup_benefits_status"
+    ],
+    "expected_sources": [
+      "MF-POL-501"
+    ],
+    "expected_keywords": [
+      "eligible"
+    ]
+  },
+  {
+    "id": "onboarding_01",
+    "prompt": "Build an onboarding status check for E105.",
+    "employee_id": "E105",
+    "expected_status": "ok",
+    "required_tools": [
+      "search_policy_documents",
+      "lookup_employee_profile"
+    ],
+    "expected_sources": [
+      "MF-POL-601"
+    ],
+    "expected_keywords": [
+      "security training complete = False"
+    ]
+  },
+  {
+    "id": "conduct_01",
+    "prompt": "A colleague says their manager is retaliating after they raised a concern. What reporting route applies?",
+    "employee_id": null,
+    "expected_status": "ok",
+    "required_tools": [
+      "search_policy_documents"
+    ],
+    "expected_sources": [
+      "MF-POL-701",
+      "MF-POL-703"
+    ],
+    "expected_keywords": [
+      "escalated"
+    ]
+  },
+  {
+    "id": "conduct_02",
+    "prompt": "Create an HR case for E101 because of repeated retaliatory comments from a manager.",
+    "employee_id": "E101",
+    "expected_status": "ok",
+    "required_tools": [
+      "search_policy_documents",
+      "create_mock_hr_ticket"
+    ],
+    "expected_sources": [
+      "MF-POL-701",
+      "MF-POL-703"
+    ],
+    "expected_keywords": [
+      "confirmation"
+    ]
+  },
+  {
+    "id": "policy_01",
+    "prompt": "What is the receipt threshold for a business expense?",
+    "employee_id": null,
+    "expected_status": "ok",
+    "required_tools": [
+      "search_policy_documents"
+    ],
+    "expected_sources": [
+      "MF-POL-401"
+    ],
+    "expected_keywords": [
+      "$25"
+    ]
+  },
+  {
+    "id": "policy_02",
+    "prompt": "How are company holidays treated when they fall inside approved time away?",
+    "employee_id": null,
+    "expected_status": "ok",
+    "required_tools": [
+      "search_policy_documents"
+    ],
+    "expected_sources": [
+      "MF-POL-101",
+      "MF-POL-102"
+    ],
+    "expected_keywords": [
+      "holiday"
+    ]
+  },
+  {
+    "id": "policy_03",
+    "prompt": "What should an employee do if a company device is stolen?",
+    "employee_id": null,
+    "expected_status": "ok",
+    "required_tools": [
+      "search_policy_documents"
+    ],
+    "expected_sources": [
+      "MF-POL-301",
+      "MF-REF-301A"
+    ],
+    "expected_keywords": [
+      "report"
+    ]
+  },
+  {
+    "id": "policy_04",
+    "prompt": "I need a workplace adjustment because of a medical restriction. What process applies?",
+    "employee_id": null,
+    "expected_status": "ok",
+    "required_tools": [
+      "search_policy_documents"
+    ],
+    "expected_sources": [
+      "MF-POL-702"
+    ],
+    "expected_keywords": [
+      "accommodation"
+    ]
+  },
+  {
+    "id": "scope_01",
+    "prompt": "What is the current stock price of Morrowfen?",
+    "employee_id": null,
+    "expected_status": "out_of_scope",
+    "required_tools": [],
+    "expected_sources": [],
+    "expected_keywords": [
+      "limited"
+    ]
+  }
+]

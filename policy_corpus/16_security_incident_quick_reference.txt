@@ -1,0 +1,36 @@
+MF-REF-301A — SECURITY INCIDENT RESPONSE QUICK REFERENCE
+Owner: Information Security
+Effective: 15 January 2026
+Version: 1.3
+
+IMMEDIATE REPORTING
+Report suspected phishing, stolen credentials, lost or stolen company devices, malware, accidental disclosure of Confidential or Restricted data, and unauthorized access as soon as discovered. Do not wait for proof of harm.
+
+URGENT PHYSICAL SAFETY
+If there is an immediate threat to physical safety, use local emergency procedures first. Once safe, notify the company security or People Operations channel as appropriate.
+
+FIRST ACTIONS
+1. Stop the activity if it can be stopped safely without destroying evidence.
+2. Disconnect a device from the network if Security instructs you to do so; do not wipe or reimage it on your own.
+3. Preserve relevant messages, screenshots, file names, timestamps, and device details.
+4. Report the event through the approved Security Response channel.
+5. Follow instructions from the incident owner.
+
+DO NOT
+- Do not contact a suspected attacker.
+- Do not pay a ransom or make a commitment on behalf of the company.
+- Do not delete evidence to make the incident look resolved.
+- Do not post incident details to public channels.
+- Do not conduct an independent forensic investigation unless assigned.
+
+LOST OR STOLEN DEVICE
+Report the device, approximate loss time, last known location, and whether it may have been unlocked. Security may remotely lock or wipe a managed device. A police report may be requested for theft depending on local circumstances.
+
+CREDENTIAL EXPOSURE
+If a password, token, or key may have been exposed, report it and rotate it using the approved process. If an unexpected multi-factor prompt appears, deny it and report the event. Do not approve a prompt simply to stop repeated notifications.
+
+DATA DISCLOSURE
+For accidental sharing, provide what was shared, who received it, the data classification if known, and whether access can still be revoked. Do not ask an unintended recipient to destroy regulated information until Security or Legal gives instructions.
+
+REFERENCE
+MF-POL-301 contains the full information-security requirements. MF-POL-703 covers HR case handling and privacy. This quick reference does not replace either policy.

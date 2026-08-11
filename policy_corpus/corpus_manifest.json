@@ -1,0 +1,72 @@
+{
+  "document_count": 16,
+  "total_words": 9824,
+  "planning_words_per_page": 325,
+  "estimated_pages": 31,
+  "files": [
+    {
+      "file": "01_paid_time_off.md",
+      "words": 807
+    },
+    {
+      "file": "02_holidays_and_closures.md",
+      "words": 697
+    },
+    {
+      "file": "03_remote_work.md",
+      "words": 753
+    },
+    {
+      "file": "04_location_tax_immigration.md",
+      "words": 646
+    },
+    {
+      "file": "05_information_security.md",
+      "words": 728
+    },
+    {
+      "file": "06_business_expenses.md",
+      "words": 722
+    },
+    {
+      "file": "07_equipment_home_office.md",
+      "words": 684
+    },
+    {
+      "file": "08_benefits.md",
+      "words": 658
+    },
+    {
+      "file": "09_leave_of_absence.md",
+      "words": 630
+    },
+    {
+      "file": "10_onboarding_access.md",
+      "words": 570
+    },
+    {
+      "file": "11_employment_status_schedules.md",
+      "words": 553
+    },
+    {
+      "file": "12_workplace_conduct.md",
+      "words": 613
+    },
+    {
+      "file": "13_accommodations.md",
+      "words": 582
+    },
+    {
+      "file": "14_hr_case_handling.md",
+      "words": 627
+    },
+    {
+      "file": "15_holiday_calendar_2026.html",
+      "words": 214
+    },
+    {
+      "file": "16_security_incident_quick_reference.txt",
+      "words": 340
+    }
+  ]
+}

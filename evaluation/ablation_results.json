@@ -1,0 +1,510 @@
+{
+  "comparison": "Lexical fallback retrieval k=3 versus k=5",
+  "purpose": "Ablation harness showing how retrieval depth changes source recall. Run the same method with RAG_BACKEND=chroma before final submission for the production retrieval comparison.",
+  "runs": [
+    {
+      "k": 3,
+      "source_recall": 0.95,
+      "details": [
+        {
+          "id": "pto_01",
+          "hit": true,
+          "returned": [
+            "MF-POL-101",
+            "MF-POL-502",
+            "MF-POL-701"
+          ],
+          "expected": [
+            "MF-POL-101"
+          ]
+        },
+        {
+          "id": "pto_04",
+          "hit": true,
+          "returned": [
+            "MF-POL-101",
+            "MF-POL-102",
+            "MF-POL-602"
+          ],
+          "expected": [
+            "MF-POL-101"
+          ]
+        },
+        {
+          "id": "remote_01",
+          "hit": true,
+          "returned": [
+            "MF-POL-201",
+            "MF-POL-202",
+            "MF-REF-301A"
+          ],
+          "expected": [
+            "MF-POL-201",
+            "MF-POL-202",
+            "MF-POL-301"
+          ]
+        },
+        {
+          "id": "remote_02",
+          "hit": true,
+          "returned": [
+            "MF-POL-201",
+            "MF-POL-202",
+            "MF-POL-301"
+          ],
+          "expected": [
+            "MF-POL-201",
+            "MF-POL-202",
+            "MF-POL-301"
+          ]
+        },
+        {
+          "id": "remote_03",
+          "hit": true,
+          "returned": [
+            "MF-POL-201",
+            "MF-POL-202"
+          ],
+          "expected": [
+            "MF-POL-201",
+            "MF-POL-202"
+          ]
+        },
+        {
+          "id": "expense_01",
+          "hit": true,
+          "returned": [
+            "MF-POL-401",
+            "MF-POL-402",
+            "MF-POL-702"
+          ],
+          "expected": [
+            "MF-POL-401",
+            "MF-POL-402"
+          ]
+        },
+        {
+          "id": "expense_02",
+          "hit": true,
+          "returned": [
+            "MF-POL-401",
+            "MF-POL-402"
+          ],
+          "expected": [
+            "MF-POL-401",
+            "MF-POL-402"
+          ]
+        },
+        {
+          "id": "expense_03",
+          "hit": true,
+          "returned": [
+            "MF-POL-401",
+            "MF-POL-402"
+          ],
+          "expected": [
+            "MF-POL-401",
+            "MF-POL-402"
+          ]
+        },
+        {
+          "id": "expense_04",
+          "hit": true,
+          "returned": [
+            "MF-POL-401",
+            "MF-POL-402",
+            "MF-POL-601"
+          ],
+          "expected": [
+            "MF-POL-401"
+          ]
+        },
+        {
+          "id": "benefits_01",
+          "hit": true,
+          "returned": [
+            "MF-POL-501"
+          ],
+          "expected": [
+            "MF-POL-501"
+          ]
+        },
+        {
+          "id": "benefits_02",
+          "hit": true,
+          "returned": [
+            "MF-POL-501"
+          ],
+          "expected": [
+            "MF-POL-501"
+          ]
+        },
+        {
+          "id": "benefits_03",
+          "hit": true,
+          "returned": [
+            "MF-POL-501",
+            "MF-POL-502"
+          ],
+          "expected": [
+            "MF-POL-501"
+          ]
+        },
+        {
+          "id": "benefits_04",
+          "hit": true,
+          "returned": [
+            "MF-POL-501",
+            "MF-POL-602"
+          ],
+          "expected": [
+            "MF-POL-501"
+          ]
+        },
+        {
+          "id": "onboarding_01",
+          "hit": true,
+          "returned": [
+            "MF-POL-601",
+            "MF-POL-602"
+          ],
+          "expected": [
+            "MF-POL-601"
+          ]
+        },
+        {
+          "id": "conduct_01",
+          "hit": true,
+          "returned": [
+            "MF-POL-202",
+            "MF-POL-502",
+            "MF-POL-701"
+          ],
+          "expected": [
+            "MF-POL-701",
+            "MF-POL-703"
+          ]
+        },
+        {
+          "id": "conduct_02",
+          "hit": true,
+          "returned": [
+            "MF-POL-401",
+            "MF-POL-701",
+            "MF-POL-703"
+          ],
+          "expected": [
+            "MF-POL-701",
+            "MF-POL-703"
+          ]
+        },
+        {
+          "id": "policy_01",
+          "hit": true,
+          "returned": [
+            "MF-POL-401",
+            "MF-POL-402"
+          ],
+          "expected": [
+            "MF-POL-401"
+          ]
+        },
+        {
+          "id": "policy_02",
+          "hit": true,
+          "returned": [
+            "MF-CAL-2026",
+            "MF-POL-101",
+            "MF-POL-102"
+          ],
+          "expected": [
+            "MF-POL-101",
+            "MF-POL-102"
+          ]
+        },
+        {
+          "id": "policy_03",
+          "hit": false,
+          "returned": [
+            "MF-POL-401"
+          ],
+          "expected": [
+            "MF-POL-301",
+            "MF-REF-301A"
+          ]
+        },
+        {
+          "id": "policy_04",
+          "hit": true,
+          "returned": [
+            "MF-POL-402",
+            "MF-POL-502",
+            "MF-POL-702"
+          ],
+          "expected": [
+            "MF-POL-702"
+          ]
+        }
+      ]
+    },
+    {
+      "k": 5,
+      "source_recall": 0.95,
+      "details": [
+        {
+          "id": "pto_01",
+          "hit": true,
+          "returned": [
+            "MF-POL-101",
+            "MF-POL-502",
+            "MF-POL-701"
+          ],
+          "expected": [
+            "MF-POL-101"
+          ]
+        },
+        {
+          "id": "pto_04",
+          "hit": true,
+          "returned": [
+            "MF-POL-101",
+            "MF-POL-102",
+            "MF-POL-502",
+            "MF-POL-602"
+          ],
+          "expected": [
+            "MF-POL-101"
+          ]
+        },
+        {
+          "id": "remote_01",
+          "hit": true,
+          "returned": [
+            "MF-POL-201",
+            "MF-POL-202",
+            "MF-POL-602",
+            "MF-REF-301A"
+          ],
+          "expected": [
+            "MF-POL-201",
+            "MF-POL-202",
+            "MF-POL-301"
+          ]
+        },
+        {
+          "id": "remote_02",
+          "hit": true,
+          "returned": [
+            "MF-POL-201",
+            "MF-POL-202",
+            "MF-POL-301",
+            "MF-POL-602"
+          ],
+          "expected": [
+            "MF-POL-201",
+            "MF-POL-202",
+            "MF-POL-301"
+          ]
+        },
+        {
+          "id": "remote_03",
+          "hit": true,
+          "returned": [
+            "MF-POL-101",
+            "MF-POL-201",
+            "MF-POL-202"
+          ],
+          "expected": [
+            "MF-POL-201",
+            "MF-POL-202"
+          ]
+        },
+        {
+          "id": "expense_01",
+          "hit": true,
+          "returned": [
+            "MF-POL-401",
+            "MF-POL-402",
+            "MF-POL-702"
+          ],
+          "expected": [
+            "MF-POL-401",
+            "MF-POL-402"
+          ]
+        },
+        {
+          "id": "expense_02",
+          "hit": true,
+          "returned": [
+            "MF-POL-401",
+            "MF-POL-402"
+          ],
+          "expected": [
+            "MF-POL-401",
+            "MF-POL-402"
+          ]
+        },
+        {
+          "id": "expense_03",
+          "hit": true,
+          "returned": [
+            "MF-POL-401",
+            "MF-POL-402",
+            "MF-POL-601"
+          ],
+          "expected": [
+            "MF-POL-401",
+            "MF-POL-402"
+          ]
+        },
+        {
+          "id": "expense_04",
+          "hit": true,
+          "returned": [
+            "MF-POL-401",
+            "MF-POL-402",
+            "MF-POL-601",
+            "MF-POL-602"
+          ],
+          "expected": [
+            "MF-POL-401"
+          ]
+        },
+        {
+          "id": "benefits_01",
+          "hit": true,
+          "returned": [
+            "MF-POL-501",
+            "MF-POL-502"
+          ],
+          "expected": [
+            "MF-POL-501"
+          ]
+        },
+        {
+          "id": "benefits_02",
+          "hit": true,
+          "returned": [
+            "MF-POL-501",
+            "MF-POL-703"
+          ],
+          "expected": [
+            "MF-POL-501"
+          ]
+        },
+        {
+          "id": "benefits_03",
+          "hit": true,
+          "returned": [
+            "MF-POL-402",
+            "MF-POL-501",
+            "MF-POL-502"
+          ],
+          "expected": [
+            "MF-POL-501"
+          ]
+        },
+        {
+          "id": "benefits_04",
+          "hit": true,
+          "returned": [
+            "MF-POL-501",
+            "MF-POL-602"
+          ],
+          "expected": [
+            "MF-POL-501"
+          ]
+        },
+        {
+          "id": "onboarding_01",
+          "hit": true,
+          "returned": [
+            "MF-POL-402",
+            "MF-POL-601",
+            "MF-POL-602"
+          ],
+          "expected": [
+            "MF-POL-601"
+          ]
+        },
+        {
+          "id": "conduct_01",
+          "hit": true,
+          "returned": [
+            "MF-POL-202",
+            "MF-POL-401",
+            "MF-POL-502",
+            "MF-POL-701"
+          ],
+          "expected": [
+            "MF-POL-701",
+            "MF-POL-703"
+          ]
+        },
+        {
+          "id": "conduct_02",
+          "hit": true,
+          "returned": [
+            "MF-POL-401",
+            "MF-POL-601",
+            "MF-POL-701",
+            "MF-POL-703"
+          ],
+          "expected": [
+            "MF-POL-701",
+            "MF-POL-703"
+          ]
+        },
+        {
+          "id": "policy_01",
+          "hit": true,
+          "returned": [
+            "MF-POL-401",
+            "MF-POL-402"
+          ],
+          "expected": [
+            "MF-POL-401"
+          ]
+        },
+        {
+          "id": "policy_02",
+          "hit": true,
+          "returned": [
+            "MF-CAL-2026",
+            "MF-POL-101",
+            "MF-POL-102"
+          ],
+          "expected": [
+            "MF-POL-101",
+            "MF-POL-102"
+          ]
+        },
+        {
+          "id": "policy_03",
+          "hit": false,
+          "returned": [
+            "MF-POL-101",
+            "MF-POL-401",
+            "MF-POL-602"
+          ],
+          "expected": [
+            "MF-POL-301",
+            "MF-REF-301A"
+          ]
+        },
+        {
+          "id": "policy_04",
+          "hit": true,
+          "returned": [
+            "MF-POL-402",
+            "MF-POL-502",
+            "MF-POL-702"
+          ],
+          "expected": [
+            "MF-POL-702"
+          ]
+        }
+      ]
+    }
+  ]
+}

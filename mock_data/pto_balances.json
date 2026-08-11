@@ -1,0 +1,10 @@
+[
+  {"employee_id":"E101","available_hours":72,"floating_holiday_hours":16,"as_of":"2026-08-01"},
+  {"employee_id":"E102","available_hours":56,"floating_holiday_hours":8,"as_of":"2026-08-01"},
+  {"employee_id":"E103","available_hours":18,"floating_holiday_hours":8,"as_of":"2026-08-01"},
+  {"employee_id":"E104","available_hours":88,"floating_holiday_hours":16,"as_of":"2026-08-01"},
+  {"employee_id":"E105","available_hours":0,"floating_holiday_hours":0,"as_of":"2026-08-01"},
+  {"employee_id":"E106","available_hours":41,"floating_holiday_hours":12.8,"as_of":"2026-08-01"},
+  {"employee_id":"E107","available_hours":8,"floating_holiday_hours":16,"as_of":"2026-08-01"},
+  {"employee_id":"E108","available_hours":104,"floating_holiday_hours":16,"as_of":"2026-08-01"}
+]

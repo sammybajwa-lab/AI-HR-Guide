@@ -1,0 +1,575 @@
+{
+  "summary": {
+    "backend": "lexical",
+    "llm_enabled": false,
+    "case_count": 25,
+    "status_accuracy": 1,
+    "tool_selection_accuracy": 1,
+    "workflow_completion_proxy": 1,
+    "groundedness_proxy": 1,
+    "citation_accuracy_proxy": 0.908,
+    "source_recall": 1,
+    "action_safety_pass_rate": 1,
+    "latency_p50_ms": 0.19,
+    "latency_p95_ms": 0.45,
+    "note": "Automated proxy metrics. Human review is still required for final answer quality and legal/policy nuance."
+  },
+  "results": [
+    {
+      "id": "pto_01",
+      "status": "ok",
+      "status_ok": true,
+      "tool_selection_ok": true,
+      "source_recall_ok": true,
+      "keyword_score": 1.0,
+      "grounded_proxy": true,
+      "citation_precision_proxy": 1.0,
+      "safety_ok": true,
+      "latency_ms": 6.07,
+      "tools": [
+        "lookup_employee_profile",
+        "check_pto_balance",
+        "check_policy_compliance",
+        "search_policy_documents"
+      ],
+      "sources": [
+        "MF-POL-101",
+        "MF-POL-101",
+        "MF-POL-101",
+        "MF-POL-101"
+      ],
+      "answer": "The stored balance is 56 hours. A 24-hour request would leave 32 hours. The balance is sufficient, but manager approval and the applicable notice window still apply. [MF-POL-101 \u00a73. Request timing]"
+    },
+    {
+      "id": "pto_02",
+      "status": "needs_clarification",
+      "status_ok": true,
+      "tool_selection_ok": true,
+      "source_recall_ok": true,
+      "keyword_score": 1.0,
+      "grounded_proxy": true,
+      "citation_precision_proxy": 1.0,
+      "safety_ok": true,
+      "latency_ms": 0.04,
+      "tools": [],
+      "sources": [],
+      "answer": "I need the synthetic employee ID before I can check a PTO balance."
+    },
+    {
+      "id": "pto_03",
+      "status": "needs_clarification",
+      "status_ok": true,
+      "tool_selection_ok": true,
+      "source_recall_ok": true,
+      "keyword_score": 1.0,
+      "grounded_proxy": true,
+      "citation_precision_proxy": 1.0,
+      "safety_ok": true,
+      "latency_ms": 0.01,
+      "tools": [],
+      "sources": [],
+      "answer": "I can check this once the request is stated in hours. The policy does not let me assume every employee works eight-hour days."
+    },
+    {
+      "id": "pto_04",
+      "status": "ok",
+      "status_ok": true,
+      "tool_selection_ok": true,
+      "source_recall_ok": true,
+      "keyword_score": 1.0,
+      "grounded_proxy": true,
+      "citation_precision_proxy": 1.0,
+      "safety_ok": true,
+      "latency_ms": 0.32,
+      "tools": [
+        "lookup_employee_profile",
+        "check_pto_balance",
+        "check_policy_compliance",
+        "search_policy_documents"
+      ],
+      "sources": [
+        "MF-POL-101",
+        "MF-POL-101",
+        "MF-POL-101",
+        "MF-POL-101"
+      ],
+      "answer": "The stored balance is 8 hours, which is below the 16 hours requested. A negative balance needs People Operations approval; a manager cannot approve it alone. [MF-POL-101 \u00a73. Request timing]"
+    },
+    {
+      "id": "remote_01",
+      "status": "ok",
+      "status_ok": true,
+      "tool_selection_ok": true,
+      "source_recall_ok": true,
+      "keyword_score": 1.0,
+      "grounded_proxy": true,
+      "citation_precision_proxy": 1.0,
+      "safety_ok": true,
+      "latency_ms": 0.45,
+      "tools": [
+        "lookup_employee_profile",
+        "check_policy_compliance",
+        "search_policy_documents"
+      ],
+      "sources": [
+        "MF-POL-201",
+        "MF-POL-202",
+        "MF-POL-201",
+        "MF-POL-202",
+        "MF-POL-201"
+      ],
+      "answer": "This request is outside the standard temporary international arrangement. The request is 30 working days, while the standard allowance is up to 20 working days in a rolling 12-month period; it needs formal assignment/transfer review and the required People Operations, Tax Operations, and Information Security approvals before work begins. [MF-POL-201 \u00a75. Temporary international remote work]"
+    },
+    {
+      "id": "remote_02",
+      "status": "ok",
+      "status_ok": true,
+      "tool_selection_ok": true,
+      "source_recall_ok": true,
+      "keyword_score": 1.0,
+      "grounded_proxy": true,
+      "citation_precision_proxy": 1.0,
+      "safety_ok": true,
+      "latency_ms": 0.38,
+      "tools": [
+        "lookup_employee_profile",
+        "check_policy_compliance",
+        "search_policy_documents"
+      ],
+      "sources": [
+        "MF-POL-201",
+        "MF-POL-202",
+        "MF-POL-201",
+        "MF-POL-202",
+        "MF-POL-201"
+      ],
+      "answer": "The request requires pre-approval before work starts. Required reviewers in the stored rule are: People Operations, Tax Operations, Information Security. [MF-POL-201 \u00a75. Temporary international remote work]"
+    },
+    {
+      "id": "remote_03",
+      "status": "ok",
+      "status_ok": true,
+      "tool_selection_ok": true,
+      "source_recall_ok": true,
+      "keyword_score": 1.0,
+      "grounded_proxy": true,
+      "citation_precision_proxy": 1.0,
+      "safety_ok": true,
+      "latency_ms": 0.32,
+      "tools": [
+        "lookup_employee_profile",
+        "check_policy_compliance",
+        "search_policy_documents"
+      ],
+      "sources": [
+        "MF-POL-201",
+        "MF-POL-202",
+        "MF-POL-202",
+        "MF-POL-202",
+        "MF-POL-201",
+        "MF-POL-202"
+      ],
+      "answer": "The request requires pre-approval before work starts. Required reviewers in the stored rule are: People Operations, Tax Operations. [MF-POL-201 \u00a74. Temporary domestic remote work]"
+    },
+    {
+      "id": "remote_04",
+      "status": "needs_clarification",
+      "status_ok": true,
+      "tool_selection_ok": true,
+      "source_recall_ok": true,
+      "keyword_score": 1.0,
+      "grounded_proxy": true,
+      "citation_precision_proxy": 1.0,
+      "safety_ok": true,
+      "latency_ms": 0.03,
+      "tools": [],
+      "sources": [],
+      "answer": "I need the expected number of working days. The policy uses working-day thresholds, so I will not convert calendar weeks without the work schedule."
+    },
+    {
+      "id": "expense_01",
+      "status": "ok",
+      "status_ok": true,
+      "tool_selection_ok": true,
+      "source_recall_ok": true,
+      "keyword_score": 1.0,
+      "grounded_proxy": true,
+      "citation_precision_proxy": 1.0,
+      "safety_ok": true,
+      "latency_ms": 0.27,
+      "tools": [
+        "lookup_employee_profile",
+        "check_policy_compliance",
+        "search_policy_documents"
+      ],
+      "sources": [
+        "MF-POL-402",
+        "MF-POL-402",
+        "MF-POL-401",
+        "MF-POL-402",
+        "MF-POL-401"
+      ],
+      "answer": "Decision: potentially reimbursable. The item can fit the general home-office rules if allowance remains and receipt/approval requirements are met. [MF-POL-402 \u00a710. Expense examples]"
+    },
+    {
+      "id": "expense_02",
+      "status": "ok",
+      "status_ok": true,
+      "tool_selection_ok": true,
+      "source_recall_ok": true,
+      "keyword_score": 1.0,
+      "grounded_proxy": true,
+      "citation_precision_proxy": 1.0,
+      "safety_ok": true,
+      "latency_ms": 0.25,
+      "tools": [
+        "lookup_employee_profile",
+        "check_policy_compliance",
+        "search_policy_documents"
+      ],
+      "sources": [
+        "MF-POL-402",
+        "MF-POL-402",
+        "MF-POL-401",
+        "MF-POL-402",
+        "MF-POL-401"
+      ],
+      "answer": "Decision: preapproval required. A single home-office item above $250 requires manager pre-approval. [MF-POL-402 \u00a710. Expense examples]"
+    },
+    {
+      "id": "expense_03",
+      "status": "ok",
+      "status_ok": true,
+      "tool_selection_ok": true,
+      "source_recall_ok": true,
+      "keyword_score": 1.0,
+      "grounded_proxy": true,
+      "citation_precision_proxy": 1.0,
+      "safety_ok": true,
+      "latency_ms": 0.25,
+      "tools": [
+        "lookup_employee_profile",
+        "check_policy_compliance",
+        "search_policy_documents"
+      ],
+      "sources": [
+        "MF-POL-402",
+        "MF-POL-402",
+        "MF-POL-401",
+        "MF-POL-402",
+        "MF-POL-401"
+      ],
+      "answer": "Decision: not standard reimbursement. Company laptops are provisioned through IT; personal purchase requires prior written IT and budget approval. [MF-POL-402 \u00a710. Expense examples]"
+    },
+    {
+      "id": "expense_04",
+      "status": "ok",
+      "status_ok": true,
+      "tool_selection_ok": true,
+      "source_recall_ok": true,
+      "keyword_score": 1.0,
+      "grounded_proxy": true,
+      "citation_precision_proxy": 0.2,
+      "safety_ok": true,
+      "latency_ms": 0.28,
+      "tools": [
+        "lookup_employee_profile",
+        "check_policy_compliance",
+        "search_policy_documents"
+      ],
+      "sources": [
+        "MF-POL-401",
+        "MF-POL-402",
+        "MF-POL-402",
+        "MF-POL-402",
+        "MF-POL-402"
+      ],
+      "answer": "Decision: budget owner approval required. Non-travel purchases from $500 through $2,499 require manager and budget-owner approval. [MF-POL-401 \u00a712. Example decisions]"
+    },
+    {
+      "id": "expense_05",
+      "status": "needs_clarification",
+      "status_ok": true,
+      "tool_selection_ok": true,
+      "source_recall_ok": true,
+      "keyword_score": 1.0,
+      "grounded_proxy": true,
+      "citation_precision_proxy": 1.0,
+      "safety_ok": true,
+      "latency_ms": 0.02,
+      "tools": [],
+      "sources": [],
+      "answer": "I need both the item and the amount to apply the expense thresholds."
+    },
+    {
+      "id": "benefits_01",
+      "status": "ok",
+      "status_ok": true,
+      "tool_selection_ok": true,
+      "source_recall_ok": true,
+      "keyword_score": 1.0,
+      "grounded_proxy": true,
+      "citation_precision_proxy": 1.0,
+      "safety_ok": true,
+      "latency_ms": 0.18,
+      "tools": [
+        "search_policy_documents",
+        "lookup_employee_profile",
+        "lookup_benefits_status"
+      ],
+      "sources": [
+        "MF-POL-501",
+        "MF-POL-501",
+        "MF-POL-501",
+        "MF-POL-501"
+      ],
+      "answer": "Stored benefits status for E103: not_eligible_hours; medical: not_enrolled; effective date: not recorded. [MF-POL-501 \u00a72. Coverage effective date]"
+    },
+    {
+      "id": "benefits_02",
+      "status": "ok",
+      "status_ok": true,
+      "tool_selection_ok": true,
+      "source_recall_ok": true,
+      "keyword_score": 1.0,
+      "grounded_proxy": true,
+      "citation_precision_proxy": 1.0,
+      "safety_ok": true,
+      "latency_ms": 0.17,
+      "tools": [
+        "search_policy_documents",
+        "lookup_employee_profile",
+        "lookup_benefits_status"
+      ],
+      "sources": [
+        "MF-POL-501",
+        "MF-POL-501",
+        "MF-POL-501",
+        "MF-POL-501"
+      ],
+      "answer": "Stored benefits status for E107: eligible_pending_waiting_period; medical: pending; effective date: 2026-09-01. [MF-POL-501 \u00a72. Coverage effective date]"
+    },
+    {
+      "id": "benefits_03",
+      "status": "ok",
+      "status_ok": true,
+      "tool_selection_ok": true,
+      "source_recall_ok": true,
+      "keyword_score": 1.0,
+      "grounded_proxy": true,
+      "citation_precision_proxy": 0.5,
+      "safety_ok": true,
+      "latency_ms": 0.22,
+      "tools": [
+        "search_policy_documents"
+      ],
+      "sources": [
+        "MF-POL-501",
+        "MF-POL-502",
+        "MF-POL-502",
+        "MF-POL-501"
+      ],
+      "answer": "Policy evidence found:\n- For a newly eligible employee, medical, dental, and vision coverage begins on the **first day of the month following 30 days of active employment**. If the 30th day falls on the first day of a month, coverage still begins on the first day of the following month. The enrollment window is 30 calendar days from the employee's el... [MF-POL-501 \u00a72. Coverage effective date]\n- When an employee says an absence may involve a serious health condition or more than five scheduled workdays, the manager should record only the operational facts needed for coverage and refer the employee to People Operations. The manager should not ask for a diagnosis, medication list, or medical records. People Operations... [MF-POL-502 \u00a711. Manager workflow]\n- An employee should contact People Operations when an absence may last more than five consecutive scheduled workdays, is related to a serious health condition, involves care for a family member, relates to pregnancy or birth, involves military duty, or may require a workplace accommodation. Managers should not diagnose the sit... [MF-POL-502 \u00a72. When to contact People Operations]"
+    },
+    {
+      "id": "benefits_04",
+      "status": "ok",
+      "status_ok": true,
+      "tool_selection_ok": true,
+      "source_recall_ok": true,
+      "keyword_score": 1.0,
+      "grounded_proxy": true,
+      "citation_precision_proxy": 1.0,
+      "safety_ok": true,
+      "latency_ms": 0.17,
+      "tools": [
+        "search_policy_documents",
+        "lookup_employee_profile",
+        "lookup_benefits_status"
+      ],
+      "sources": [
+        "MF-POL-501",
+        "MF-POL-501",
+        "MF-POL-501",
+        "MF-POL-501"
+      ],
+      "answer": "Stored benefits status for E106: eligible; medical: enrolled; effective date: 2024-01-01. [MF-POL-501 \u00a72. Coverage effective date]"
+    },
+    {
+      "id": "onboarding_01",
+      "status": "ok",
+      "status_ok": true,
+      "tool_selection_ok": true,
+      "source_recall_ok": true,
+      "keyword_score": 1.0,
+      "grounded_proxy": true,
+      "citation_precision_proxy": 1.0,
+      "safety_ok": true,
+      "latency_ms": 0.13,
+      "tools": [
+        "search_policy_documents",
+        "lookup_employee_profile"
+      ],
+      "sources": [
+        "MF-POL-601",
+        "MF-POL-601",
+        "MF-POL-601",
+        "MF-POL-601",
+        "MF-POL-601"
+      ],
+      "answer": "For E105, the stored profile shows work arrangement 'site_based' and security training complete = False. Other onboarding steps are not marked complete unless a source record says so. [MF-POL-601 \u00a77. Thirty-day onboarding check]"
+    },
+    {
+      "id": "conduct_01",
+      "status": "ok",
+      "status_ok": true,
+      "tool_selection_ok": true,
+      "source_recall_ok": true,
+      "keyword_score": 1.0,
+      "grounded_proxy": true,
+      "citation_precision_proxy": 1.0,
+      "safety_ok": true,
+      "latency_ms": 0.19,
+      "tools": [
+        "search_policy_documents"
+      ],
+      "sources": [
+        "MF-POL-703",
+        "MF-POL-701",
+        "MF-POL-703",
+        "MF-POL-703",
+        "MF-POL-703",
+        "MF-POL-701"
+      ],
+      "answer": "This should be escalated rather than decided by the assistant. People Operations, Legal, a manager not involved in the concern, or the confidential speak-up channel are available reporting routes. [MF-POL-703 \u00a72. Case categories]"
+    },
+    {
+      "id": "conduct_02",
+      "status": "ok",
+      "status_ok": true,
+      "tool_selection_ok": true,
+      "source_recall_ok": true,
+      "keyword_score": 1.0,
+      "grounded_proxy": true,
+      "citation_precision_proxy": 1.0,
+      "safety_ok": true,
+      "latency_ms": 0.22,
+      "tools": [
+        "search_policy_documents",
+        "create_mock_hr_ticket"
+      ],
+      "sources": [
+        "MF-POL-703",
+        "MF-POL-701",
+        "MF-POL-703",
+        "MF-POL-703",
+        "MF-POL-703",
+        "MF-POL-701"
+      ],
+      "answer": "This should be escalated rather than decided by the assistant. People Operations, Legal, a manager not involved in the concern, or the confidential speak-up channel are available reporting routes. [MF-POL-703 \u00a72. Case categories] I prepared a mock case preview, but nothing was written because confirmation is required."
+    },
+    {
+      "id": "policy_01",
+      "status": "ok",
+      "status_ok": true,
+      "tool_selection_ok": true,
+      "source_recall_ok": true,
+      "keyword_score": 1.0,
+      "grounded_proxy": true,
+      "citation_precision_proxy": 0.5,
+      "safety_ok": true,
+      "latency_ms": 0.18,
+      "tools": [
+        "search_policy_documents"
+      ],
+      "sources": [
+        "MF-POL-401",
+        "MF-POL-402",
+        "MF-POL-402",
+        "MF-POL-401"
+      ],
+      "answer": "Policy evidence found:\n- An itemized receipt is required for any single expense of **$25 or more**. A card slip showing only the total is not itemized. If a receipt is genuinely unavailable, the employee may submit a missing-receipt statement; repeated missing receipts may be escalated to Finance Operations. Expense reports should be submitted within... [MF-POL-401 \u00a72. Receipts]\n- Employees should first check whether the item is available through the standard catalog. If it is not, they should confirm eligibility, remaining allowance, and any required pre-approval before purchase. After purchase, the employee submits the itemized receipt through the expense process. IT or Workplace Operations may ask f... [MF-POL-402 \u00a711. Ordering sequence]\n- A $180 monitor for an eligible flexible employee can normally be reimbursed from an unused allowance after manager approval and receipt submission. A $900 ergonomic chair is outside the standard allowance and should not be approved through ordinary expense processing; it may be considered through an accommodation or separatel... [MF-POL-402 \u00a710. Expense examples]"
+    },
+    {
+      "id": "policy_02",
+      "status": "ok",
+      "status_ok": true,
+      "tool_selection_ok": true,
+      "source_recall_ok": true,
+      "keyword_score": 1.0,
+      "grounded_proxy": true,
+      "citation_precision_proxy": 0.75,
+      "safety_ok": true,
+      "latency_ms": 0.19,
+      "tools": [
+        "search_policy_documents"
+      ],
+      "sources": [
+        "MF-POL-101",
+        "MF-CAL-2026",
+        "MF-POL-102",
+        "MF-POL-102"
+      ],
+      "answer": "Policy evidence found:\n- Company holidays do not reduce the PTO bank. If a holiday falls inside an approved PTO period, only scheduled working hours on non-holiday days are deducted. Weekend days are not deducted unless they are part of the employee's normal work schedule. PTO is recorded in hours. For a standard eight-hour schedule, three PTO days e... [MF-POL-101 \u00a76. Using PTO with holidays and weekends]\n- Two floating holidays are available under MF-POL-102 for eligible regular full-time employees. Floating holidays are requested through the ordinary time-off workflow and are not fixed calendar dates. [MF-CAL-2026 \u00a7Floating holidays]\n- A company holiday that falls during an approved PTO period does not use PTO hours. Only hours that the employee otherwise would have worked are charged. An employee with a non-standard workweek should use the schedule actually assigned for that week. [MF-POL-102 \u00a73. Holiday during PTO]"
+    },
+    {
+      "id": "policy_03",
+      "status": "ok",
+      "status_ok": true,
+      "tool_selection_ok": true,
+      "source_recall_ok": true,
+      "keyword_score": 1.0,
+      "grounded_proxy": true,
+      "citation_precision_proxy": 1.0,
+      "safety_ok": true,
+      "latency_ms": 0.17,
+      "tools": [
+        "search_policy_documents"
+      ],
+      "sources": [
+        "MF-REF-301A",
+        "MF-REF-301A",
+        "MF-POL-301",
+        "MF-REF-301A"
+      ],
+      "answer": "Policy evidence found:\n- Report suspected phishing, stolen credentials, lost or stolen company devices, malware, accidental disclosure of Confidential or Restricted data, and unauthorized access as soon as discovered. Do not wait for proof of harm. [MF-REF-301A \u00a7Immediate Reporting]\n- Report the device, approximate loss time, last known location, and whether it may have been unlocked. Security may remotely lock or wipe a managed device. A police report may be requested for theft depending on local circumstances. [MF-REF-301A \u00a7Lost Or Stolen Device]\n- Company-managed laptops must keep endpoint protection, disk encryption, and operating-system updates enabled. Employees may not disable security controls to install software or improve performance. A lost or stolen device must be reported immediately through the security incident channel. Restricted data should not be stored... [MF-POL-301 \u00a74. Endpoint controls]"
+    },
+    {
+      "id": "policy_04",
+      "status": "ok",
+      "status_ok": true,
+      "tool_selection_ok": true,
+      "source_recall_ok": true,
+      "keyword_score": 1.0,
+      "grounded_proxy": true,
+      "citation_precision_proxy": 0.75,
+      "safety_ok": true,
+      "latency_ms": 0.16,
+      "tools": [
+        "search_policy_documents"
+      ],
+      "sources": [
+        "MF-POL-702",
+        "MF-POL-502",
+        "MF-POL-702",
+        "MF-POL-702"
+      ],
+      "answer": "Policy evidence found:\n- People Operations coordinates an individualized review of the employee's limitation, job duties, workplace conditions, and potential adjustments. The company may request documentation where permitted and necessary. Documentation should focus on functional limitations and accommodation needs rather than unnecessary medical det... [MF-POL-702 \u00a72. Interactive review]\n- People Operations coordinates return-to-work requirements when a leave or medical restriction requires them. A manager should not independently demand a medical release. An employee returning with restrictions may also need an accommodation review. [MF-POL-502 \u00a78. Return to work]\n- An approved accommodation should identify what is changing, who needs to implement it, and when it should be reviewed if the need is temporary. Managers should raise implementation problems promptly rather than quietly discontinuing an approved adjustment. [MF-POL-702 \u00a712. Implementation and review]"
+    },
+    {
+      "id": "scope_01",
+      "status": "out_of_scope",
+      "status_ok": true,
+      "tool_selection_ok": true,
+      "source_recall_ok": true,
+      "keyword_score": 1.0,
+      "grounded_proxy": true,
+      "citation_precision_proxy": 1.0,
+      "safety_ok": true,
+      "latency_ms": 0.01,
+      "tools": [],
+      "sources": [],
+      "answer": "This desk is limited to the synthetic Morrowfen HR policy and operations corpus. I do not have grounded company evidence for that request."
+    }
+  ]
+}

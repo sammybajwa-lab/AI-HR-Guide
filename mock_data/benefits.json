@@ -1,0 +1,10 @@
+[
+  {"employee_id":"E101","eligibility_status":"eligible","medical":"enrolled","dental":"enrolled","vision":"waived","effective_date":"2024-05-01"},
+  {"employee_id":"E102","eligibility_status":"eligible","medical":"enrolled","dental":"enrolled","vision":"enrolled","effective_date":"2021-10-01"},
+  {"employee_id":"E103","eligibility_status":"not_eligible_hours","medical":"not_enrolled","dental":"not_enrolled","vision":"not_enrolled","effective_date":null},
+  {"employee_id":"E104","eligibility_status":"eligible","medical":"waived","dental":"enrolled","vision":"enrolled","effective_date":"2022-04-01"},
+  {"employee_id":"E105","eligibility_status":"not_eligible_employment_type","medical":"not_enrolled","dental":"not_enrolled","vision":"not_enrolled","effective_date":null},
+  {"employee_id":"E106","eligibility_status":"eligible","medical":"enrolled","dental":"waived","vision":"waived","effective_date":"2024-01-01"},
+  {"employee_id":"E107","eligibility_status":"eligible_pending_waiting_period","medical":"pending","dental":"pending","vision":"pending","effective_date":"2026-09-01"},
+  {"employee_id":"E108","eligibility_status":"eligible","medical":"enrolled","dental":"enrolled","vision":"enrolled","effective_date":"2019-07-01"}
+]

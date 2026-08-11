@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Morrowfen People Desk</title>
+  <link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div>
+        <div class="eyebrow">Morrowfen Systems · synthetic environment</div>
+        <h1>People Desk</h1>
+        <p class="subhead">Policy answers and HR workflow checks grounded in the project corpus.</p>
+      </div>
+      <div class="status" id="health">checking tools…</div>
+    </header>
+
+    <section class="notice">
+      This demo uses synthetic employee records. It does not send email, change HR records, or take irreversible actions.
+    </section>
+
+    <section class="quick-grid">
+      <button class="quick" data-employee="E104" data-prompt="E104 wants to work from France for six weeks, Monday-Friday. Can she do it?">
+        <span>Demo 1</span>
+        <strong>International remote work</strong>
+        <small>Profile + policy retrieval + compliance tool</small>
+      </button>
+      <button class="quick" data-employee="E102" data-prompt="E102 wants to use 24 hours of PTO. Does the balance support it, and what approval is still needed?">
+        <span>Demo 2</span>
+        <strong>PTO request guidance</strong>
+        <small>Profile + PTO balance + policy retrieval</small>
+      </button>
+    </section>
+
+    <section class="workspace">
+      <div class="input-row">
+        <label>
+          <span>Employee ID</span>
+          <input id="employee" placeholder="E102" maxlength="4">
+        </label>
+        <label class="message-label">
+          <span>Question</span>
+          <textarea id="message" rows="4" placeholder="Ask about PTO, remote work, benefits, expenses, onboarding, or a workplace concern."></textarea>
+        </label>
+      </div>
+      <div class="actions">
+        <label class="confirm"><input type="checkbox" id="confirm"> Confirm mock ticket creation if a case is requested</label>
+        <button id="send" class="primary">Run request</button>
+      </div>
+    </section>
+
+    <section id="result" class="result hidden">
+      <div class="result-header">
+        <h2>Answer</h2>
+        <span id="result-status"></span>
+      </div>
+      <div id="answer" class="answer"></div>
+      <div id="clarification" class="clarification hidden"></div>
+
+      <details id="sources-panel">
+        <summary>Policy evidence</summary>
+        <div id="sources"></div>
+      </details>
+
+      <details id="trace-panel">
+        <summary>Operational tool trace</summary>
+        <div id="trace"></div>
+      </details>
+    </section>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
